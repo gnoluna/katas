@@ -1,11 +1,11 @@
-from typing import List
-
-
 def _snail(i: int, j: int, n: int, array: list[list]) -> list:
     if n == 1:
-        return [array[i][j]]
+        if array[i]:
+            return [array[i][j]]
+        else:
+            return [] # [[]] case
     elif n == 2:
-        return array[i][j:j+n] + array[i+1][j:j+n]
+        return array[i][j:j+n] + array[i+1][j:j+n][::-1]
     else:
         first_row = array[i][j:j + n]
         rightmost_col = [arr[j + n -1] for arr in array[i + 1:i + n -1]]
