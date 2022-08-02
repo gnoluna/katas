@@ -1,3 +1,5 @@
+# https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1
+
 def _snail(i: int, j: int, n: int, array: list[list]) -> list:
     if n == 1:
         if array[i]:
